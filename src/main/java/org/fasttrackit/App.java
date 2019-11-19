@@ -1,13 +1,71 @@
 package org.fasttrackit;
 
-/**
- * Hello world!
- *
- */
-public class App 
+
+import java.time.LocalDate;
+import java.time.Month;
+
+public class App
 {
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+    public static void main(String[] args) {
+
+        System.out.println("Welcome to animal rescuer!");
+
+        Animal animalReference = new Animal();
+        animalReference.age = 2.4;
+        animalReference.favoriteActivity = "Sleeping";
+        animalReference.favoriteFood = "Pedigree";
+        animalReference.healtLevel = 7;
+        animalReference.hungerLevel = 5;
+        animalReference.name = "Rex";
+        animalReference.moodLevel = 7.5;
+
+        System.out.println("Hello, here are some informations about your dog:");
+        System.out.println("Name: " + animalReference.name);
+        System.out.println("Age: "  + animalReference.age);
+        System.out.println("Healt level: " + animalReference.healtLevel);
+        System.out.println("Mood level: " + animalReference.moodLevel);
+        System.out.println("Favorite activity: " + animalReference.favoriteActivity);
+        System.out.println("Favorite food: " + animalReference.favoriteFood);
+
+        Adoptive adoptiveReference = new Adoptive();
+        adoptiveReference.name = "John";
+        adoptiveReference.budget = 5000;
+
+        System.out.println("Informations about the adoptive: ");
+        System.out.println("Adoptive's name: " + adoptiveReference.name);
+        System.out.println("Adoptive's budget in euro: " + adoptiveReference.budget);
+
+        Food foodReference = new Food();
+        foodReference.quantity = 1;
+        foodReference.name = "Pedigree";
+        foodReference.price = 10;
+        foodReference.expirationDate = LocalDate.of(2020, Month.AUGUST, 05);
+
+        System.out.println("Informations about the food: ");
+        System.out.println("Name: " + foodReference.name);
+        System.out.println("Qunatity: " + foodReference.quantity + " kg");
+        System.out.println("Price: " + foodReference.price + " euro");
+        System.out.println("Expiration date: " + foodReference.expirationDate);
+
+        Activities activityReference = new Activities();
+        activityReference.name = "Sleeping";
+
+        System.out.println("Activity: " + activityReference.name);
+
+        VeterinaryDoctor doctorReference = new VeterinaryDoctor();
+        doctorReference.name = "Dr. Dolittle";
+        doctorReference.speciality = "Veterinary";
+
+        System.out.println("Doctors name: " + doctorReference.name + " speciality: " + doctorReference.speciality);
+
+        Game gameRef = new Game();
+        gameRef.adoptiveGameRef.name = adoptiveReference.name;
+        gameRef.animalGameRef.name = animalReference.name;
+        gameRef.docGameRef.name = doctorReference.name;
+
+        System.out.println("Game participants: ");
+        System.out.println("Doctor: " + gameRef.docGameRef.name + " Adoptive: " + gameRef.adoptiveGameRef.name + " Dog: " + gameRef.animalGameRef.name);
+
+
     }
 }
