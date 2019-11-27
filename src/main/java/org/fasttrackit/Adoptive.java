@@ -1,8 +1,7 @@
 package org.fasttrackit;
 
-public class Adoptive {
+public class Adoptive extends People {
 
-    String name;
     float budget;
 
 }
