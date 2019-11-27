@@ -9,14 +9,14 @@ public class App
     public static void main(String[] args) {
 
         System.out.println("Welcome to animal rescuer!");
+        People peopleReference = new People("joe");
 
-        Animal animalReference = new Animal();
+        Animal animalReference = new Animal("Rex");
         animalReference.age = 2.4;
         animalReference.favoriteActivity = "Sleeping";
         animalReference.favoriteFood = "Pedigree";
         animalReference.healtLevel = 7;
         animalReference.hungerLevel = 5;
-        animalReference.name = "Rex";
         animalReference.moodLevel = 7.5;
 
         System.out.println("Hello, here are some informations about your dog:");
@@ -27,17 +27,14 @@ public class App
         System.out.println("Favorite activity: " + animalReference.favoriteActivity);
         System.out.println("Favorite food: " + animalReference.favoriteFood);
 
-        Adoptive adoptiveReference = new Adoptive();
-        adoptiveReference.name = "John";
-        adoptiveReference.budget = 5000;
+        Adoptive adoptiveReference = new Adoptive("John", 500);
 
         System.out.println("Informations about the adoptive: ");
         System.out.println("Adoptive's name: " + adoptiveReference.name);
         System.out.println("Adoptive's budget in euro: " + adoptiveReference.budget);
 
-        Food foodReference = new Food();
+        Food foodReference = new Food("Pedigree");
         foodReference.quantity = 1;
-        foodReference.name = "Pedigree";
         foodReference.price = 10;
         foodReference.expirationDate = LocalDate.of(2020, Month.AUGUST, 05);
 
@@ -47,18 +44,16 @@ public class App
         System.out.println("Price: " + foodReference.price + " euro");
         System.out.println("Expiration date: " + foodReference.expirationDate);
 
-        Activities activityReference = new Activities();
-        activityReference.name = "Sleeping";
+        Activities activityReference = new Activities("Sleeping");
 
         System.out.println("Activity: " + activityReference.name);
 
-        VeterinaryDoctor doctorReference = new VeterinaryDoctor();
-        doctorReference.name = "Dr. Dolittle";
-        doctorReference.speciality = "Veterinary";
+        VeterinaryDoctor doctorReference = new VeterinaryDoctor("Dr. Dolittle", 500000, "Veterinary");
+
 
         System.out.println("Doctors name: " + doctorReference.name + " speciality: " + doctorReference.speciality);
 
-        Game gameRef = new Game();
+        Game gameRef = new Game("Game 1");
         gameRef.adoptiveGameRef.name = adoptiveReference.name;
         gameRef.animalGameRef.name = animalReference.name;
         gameRef.docGameRef.name = doctorReference.name;

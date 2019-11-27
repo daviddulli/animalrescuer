@@ -12,4 +12,7 @@ public class Food {
     double quantity;
     LocalDate expirationDate;
 
+    public Food(String name) {
+        this.name = name;
+    }
 }
